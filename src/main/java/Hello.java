@@ -9,6 +9,6 @@ public class Hello {
         PartOfTheDay pod = new PartOfTheDay();
         String answer = messageTranslator.translateMessage(pod.getPartOfTheDay());
         logger.info("Greeting: {}", answer);
-        System.out.println("Now: ".concat(answer));
+        System.out.println(answer);
     }
 }
