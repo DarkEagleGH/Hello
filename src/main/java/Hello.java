@@ -8,7 +8,7 @@ public class Hello {
     public static void main(String[] args) {
         MessageTranslator messageTranslator = new MessageTranslator();
         PartOfTheDay pod = new PartOfTheDay();
-        String answer = messageTranslator.translateMessage(pod.getPartOfTheDay(), Locale.ENGLISH);
+        String answer = messageTranslator.translateMessage(pod.getPartOfTheDay());
         logger.info("Greeting: {}", answer);
         System.out.println("Now: ".concat(answer));
     }
