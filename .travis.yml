@@ -1,6 +1,6 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn Hello
+script: mvn
 after_success:
-  - mvn clean Hello jacoco:report coveralls:report
+  - mvn clean jacoco:report coveralls:report
