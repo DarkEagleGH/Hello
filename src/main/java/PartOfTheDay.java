@@ -1,6 +1,10 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class PartOfTheDay {
+    private static final Logger logger = LoggerFactory.getLogger(PartOfTheDay.class);
     LocalTime NIGHT_LIM = LocalTime.of(6,0,0);
     LocalTime MORNING_LIM = LocalTime.of(9,0,0);
     LocalTime DAY_LIM = LocalTime.of(19,0,0);
@@ -16,6 +20,7 @@ public class PartOfTheDay {
     }
 
     private String findPart(LocalTime time) {
+        logger.info("Time: {}", time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         if (time.isAfter(NIGHT_LIM.minusNanos(1)) && time.isBefore(MORNING_LIM)) {
             return "pod.morning";
         } else if (time.isAfter(MORNING_LIM.minusNanos(1)) && time.isBefore(DAY_LIM)) {
