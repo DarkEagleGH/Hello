@@ -20,17 +20,24 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
+                <jacocoReports>
+                    <param>${project.reporting.outputDirectory}/jacoco.xml</param>
+                </jacocoReports>
             </plugin>
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.6.201602180812</version>
+                <configuration>
+                    <outputDirectory>${project.reporting.outputDirectory}/</outputDirectory>
+                </configuration>
                 <executions>
-                    <!-- Prepare execution with Surefire -->
                     <execution>
                         <id>pre-unit-test</id>
                         <goals>
@@ -40,7 +47,6 @@
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Generate report after tests are run -->
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
