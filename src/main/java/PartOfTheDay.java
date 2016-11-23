@@ -19,6 +19,11 @@ public class PartOfTheDay {
         return findPart(time);
     }
 
+    /**
+     * Compare current time with selected intervals
+     * @param time current time
+     * @return string key to
+     */
     private String findPart(LocalTime time) {
         logger.info("Current time: {}", time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         if (time.isAfter(NIGHT_LIM.minusNanos(1)) && time.isBefore(MORNING_LIM)) {
