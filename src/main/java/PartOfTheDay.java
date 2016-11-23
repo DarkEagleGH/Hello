@@ -20,7 +20,7 @@ public class PartOfTheDay {
     }
 
     private String findPart(LocalTime time) {
-        logger.info("Time: {}", time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        logger.info("Current time: {}", time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
         if (time.isAfter(NIGHT_LIM.minusNanos(1)) && time.isBefore(MORNING_LIM)) {
             return "pod.morning";
         } else if (time.isAfter(MORNING_LIM.minusNanos(1)) && time.isBefore(DAY_LIM)) {
