@@ -1,13 +1,11 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class MessageTranslator {
     private static final Logger logger = LoggerFactory.getLogger(MessageTranslator.class);
-
 
     public String translateMessage(String str, Locale locale) {
         try {
