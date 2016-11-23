@@ -5,10 +5,10 @@ import java.time.format.DateTimeFormatter;
 
 public class PartOfTheDay {
     private static final Logger logger = LoggerFactory.getLogger(PartOfTheDay.class);
-    LocalTime NIGHT_LIM = LocalTime.of(6,0,0);
-    LocalTime MORNING_LIM = LocalTime.of(9,0,0);
-    LocalTime DAY_LIM = LocalTime.of(19,0,0);
-    LocalTime EVENING_LIM = LocalTime.of(23,0,0);
+    private static final LocalTime NIGHT_LIM = LocalTime.of(6,0,0);
+    private static final LocalTime MORNING_LIM = LocalTime.of(9,0,0);
+    private static final LocalTime DAY_LIM = LocalTime.of(19,0,0);
+    private static final LocalTime EVENING_LIM = LocalTime.of(23,0,0);
 
     public String getPartOfTheDay() {
         LocalTime time = LocalTime.now();
