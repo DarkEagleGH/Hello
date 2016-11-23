@@ -13,7 +13,12 @@ public class MessageTranslatorTest {
 
     @Test
     public void testTranslateMessage() throws Exception {
-        assertEquals("Утро", msg.translateMessage("pod.morning"));
+        System.out.println("Get Language: " + Locale.getDefault().getLanguage());
+        if (Locale.getDefault().getLanguage() == "ru") {
+            assertEquals("Утро", msg.translateMessage("pod.morning"));
+        } else {
+            assertEquals("Morning", msg.translateMessage("pod.morning"));
+        }
     }
     @Test
     public void testTranslateMessageEn() throws Exception {
