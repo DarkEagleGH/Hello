@@ -29,4 +29,8 @@ public class PartOfTheDayTest {
     public void testGetPartOfTheDayNight() {
         assertEquals("pod.night", pod.getPartOfTheDay(LocalTime.of(2,0,0)));
     }
+    @Test
+    public void testGetPartOfTheDay() {
+        assertNotNull(pod.getPartOfTheDay());
+    }
 }
