@@ -1,5 +1,6 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
+import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 import static org.junit.Assert.*;
 
@@ -12,7 +13,7 @@ public class MessageTranslatorTest {
     }
 
     @Test
-    public void testTranslateMessage() throws Exception {
+    public void testTranslateMessage() throws UnsupportedEncodingException {
         if (Locale.getDefault().getLanguage() == "ru") {
             assertEquals("Утро", msg.translateMessage("pod.morning"));
         } else {
@@ -20,11 +21,11 @@ public class MessageTranslatorTest {
         }
     }
     @Test
-    public void testTranslateMessageEn() throws Exception {
+    public void testTranslateMessageEn() throws UnsupportedEncodingException {
         assertEquals("Morning", msg.translateMessage("pod.morning", Locale.ENGLISH));
     }
     @Test
-    public void testTranslateMessageRu() throws Exception {
+    public void testTranslateMessageRu() throws UnsupportedEncodingException {
         assertEquals("Утро", msg.translateMessage("pod.morning", new Locale("ru")));
     }
 }
