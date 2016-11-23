@@ -15,17 +15,17 @@ public class MessageTranslatorTest {
     @Test
     public void testTranslateMessage() throws UnsupportedEncodingException {
         if (Locale.getDefault().getLanguage() == "ru") {
-            assertEquals("Утро", msg.translateMessage("pod.morning"));
+            assertEquals("Доброе утро, мир!", msg.translateMessage("pod.morning"));
         } else {
-            assertEquals("Morning", msg.translateMessage("pod.morning"));
+            assertEquals("Good morning, World!", msg.translateMessage("pod.morning"));
         }
     }
     @Test
     public void testTranslateMessageEn() throws UnsupportedEncodingException {
-        assertEquals("Morning", msg.translateMessage("pod.morning", Locale.ENGLISH));
+        assertEquals("Good morning, World!", msg.translateMessage("pod.morning", Locale.ENGLISH));
     }
     @Test
     public void testTranslateMessageRu() throws UnsupportedEncodingException {
-        assertEquals("Утро", msg.translateMessage("pod.morning", new Locale("ru")));
+        assertEquals("Доброе утро, мир!", msg.translateMessage("pod.morning", new Locale("ru")));
     }
 }
