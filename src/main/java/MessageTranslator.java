@@ -26,6 +26,12 @@ public class MessageTranslator {
         return null;
     }
 
+    /**
+     * @param str string for translate
+     * @param locale user's corrent locale
+     * @return translated string for current locale
+     * @throws UnsupportedEncodingException
+     */
     private String getMessage(String str, Locale locale) throws UnsupportedEncodingException {
         ResourceBundle bundle;
         bundle = getResourceBundle(str, locale);
@@ -39,6 +45,11 @@ public class MessageTranslator {
         return null;
     }
 
+    /**
+     * @param str string for translate
+     * @param locale user's OS locale
+     * @return Resource bundle for selected locale and message prefix (not done yet)
+     */
     private ResourceBundle getResourceBundle(String str, Locale locale) {
         ResourceBundle bundle;
         String res = "msg_".concat(str.substring(0, str.indexOf(".")));
