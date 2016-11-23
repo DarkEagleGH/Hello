@@ -3,4 +3,4 @@ jdk:
   - oraclejdk8
 script: mvn test
 after_success:
-  - mvn -e clean test jacoco:report coveralls:report
+  - mvn -X clean test jacoco:report coveralls:report
