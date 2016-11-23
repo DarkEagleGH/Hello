@@ -6,7 +6,7 @@
             <level>DEBUG</level>
         </filter>
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{5} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss.SSS} %-5level class:%logger{5} - %msg%n</pattern>
         </encoder>
     </appender>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
@@ -15,7 +15,7 @@
         </filter>
         <file>./log/app.log</file>
         <encoder>
-            <pattern>%d{HH:mm:ss} %-5level %logger{5} - %msg%n</pattern>
+            <pattern>%d{HH:mm:ss} %-5level class:%logger{5} - %msg%n</pattern>
         </encoder>
     </appender>
 
