@@ -54,7 +54,7 @@
                 <version>4.3.0</version>
                 <configuration>
                     <jacocoReports>
-                        <param>${project.reporting.outputDirectory}</param>
+                        <param>${project.reporting.outputDirectory}/jacoco.xml</param>
                     </jacocoReports>
                 </configuration>
             </plugin>
