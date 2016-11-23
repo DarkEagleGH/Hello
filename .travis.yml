@@ -2,6 +2,6 @@ language: java
 jdk:
   - oraclejdk8
 script:
-  - mvn test
+  - mvn test jacoco:report
 after_success:
-  - coveralls
+  - mvn coveralls:report
